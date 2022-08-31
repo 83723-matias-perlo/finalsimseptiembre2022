@@ -319,25 +319,21 @@
      </property>
     </item>
    </widget>
+   <widget class="QPushButton" name="btnSimular">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>550</y>
+      <width>141</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Simular</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1000</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <widget class="QMenu" name="menuGenerar">
-    <property name="title">
-     <string>Simulacion</string>
-    </property>
-    <addaction name="actionGenerar_Simulacion"/>
-   </widget>
-   <addaction name="menuGenerar"/>
-  </widget>
   <action name="actionGenerar_Simulacion">
    <property name="text">
     <string>Generar Simulacion</string>

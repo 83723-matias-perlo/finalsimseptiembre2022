@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="imagenes">
+    <file>imgs/problema.png</file>
+    <file>imgs/tabla.png</file>
+  </qresource>
+</RCC>

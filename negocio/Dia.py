@@ -14,6 +14,7 @@ class Dia:
     # random y generadores
     __generador_clima: Random = Random()
 
+    __climas = (Clima.SOLEADO, Clima.LLUVIA, Clima.NUBLADO)
     __clima_anterior = Clima.INICIAL
     __tablas_probabilidades = {
         Clima.INICIAL: (0.33, 0.33, 0.34),
@@ -24,6 +25,15 @@ class Dia:
 
     def setGeneradorClima(generador: Random) -> None:
         Dia.__generador_clima = generador
+    
+    def setProbDpsSoleado(probs: list):
+        Dia.__tablas_probabilidades[Clima.SOLEADO] = probs
+
+    def setProbDpsLluvia(probs: list):
+        Dia.__tablas_probabilidades[Clima.LLUVIA] = probs
+
+    def setProbDpsNublado(probs: list):
+        Dia.__tablas_probabilidades[Clima.NUBLADO] = probs
 
     def __init__(self) -> None:
         self.__clima: Enum = ''
@@ -40,8 +50,8 @@ class Dia:
         for i in range(3):
             ac += climas[i]
             if rnd <= ac:
-                return Clima.__climas[i]
-        return Clima.__climas[i]
+                return Dia.__climas[i]
+        return Dia.__climas[i]
         
     def getClima(self) -> str:
         return self.__clima.value

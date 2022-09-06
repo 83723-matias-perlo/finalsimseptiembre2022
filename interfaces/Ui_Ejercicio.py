@@ -3,6 +3,7 @@ from pathlib import Path
 from PyQt5 import QtWidgets
 from PyQt5 import QtWidgets, uic
 
+from interfaces.qt.src import ejercicio_qrc
 
 class UiEjercicio(QtWidgets.QWidget):
     def __init__(self):

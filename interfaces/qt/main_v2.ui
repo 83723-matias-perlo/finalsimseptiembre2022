@@ -513,8 +513,8 @@
   </widget>
   <action name="actionGenerar_Simulacion">
    <property name="icon">
-    <iconset resource="src/ejercicio.qrc">
-     <normaloff>:/icons/icons/arrow.png</normaloff>:/icons/icons/arrow.png</iconset>
+    <iconset>
+     <normaloff>src/icons/arrow.png</normaloff>src/icons/arrow.png</iconset>
    </property>
    <property name="text">
     <string>Generar Simulacion</string>
@@ -522,8 +522,8 @@
   </action>
   <action name="actionConfigurar_Parametros">
    <property name="icon">
-    <iconset resource="src/ejercicio.qrc">
-     <normaloff>:/icons/icons/wrench.png</normaloff>:/icons/icons/wrench.png</iconset>
+    <iconset>
+     <normaloff>src/icons/wrench.png</normaloff>src/icons/wrench.png</iconset>
    </property>
    <property name="text">
     <string>Configurar Parametros</string>
@@ -531,8 +531,8 @@
   </action>
   <action name="actionLimpiarContenido">
    <property name="icon">
-    <iconset resource="src/ejercicio.qrc">
-     <normaloff>:/icons/icons/minus-button.png</normaloff>:/icons/icons/minus-button.png</iconset>
+    <iconset>
+     <normaloff>src/icons/minus-button.png</normaloff>src/icons/minus-button.png</iconset>
    </property>
    <property name="text">
     <string>LimpiarContenido</string>
@@ -540,8 +540,8 @@
   </action>
   <action name="actionSobre_El_Ejercicio">
    <property name="icon">
-    <iconset resource="src/ejercicio.qrc">
-     <normaloff>:/icons/icons/question.png</normaloff>:/icons/icons/question.png</iconset>
+    <iconset>
+     <normaloff>src/icons/question.png</normaloff>src/icons/question.png</iconset>
    </property>
    <property name="text">
     <string>Sobre El Ejercicio</string>

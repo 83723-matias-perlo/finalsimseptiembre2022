@@ -53,13 +53,14 @@ class UiMain(QtWidgets.QMainWindow):
         vector: VectorEstado = None
         produccion_ac = 0
         
-        for i in range(40):
+        for i in range(self.vtnParams.getParams().cant_anios):
             vector = simulador.ejecutarSimulacion()
             self.tablaResultados.insertRow(self.tablaResultados.rowCount())
             self.tablaResultados.setItem(self.tablaResultados.rowCount() - 1, 0, QTableWidgetItem(str(vector.getYear())))
             self.tablaResultados.setItem(self.tablaResultados.rowCount() - 1, 1, QTableWidgetItem(str(self.__truncarFloat(vector.getRndClima(), 4))))
-            for i in range(10):
+            for i in range(0, 20, 2):
                 self.tablaResultados.setItem(self.tablaResultados.rowCount() - 1, 2 + i, QTableWidgetItem(str(vector.getClimaDia(i + 1))))
+                self.tablaResultados.setItem(self.tablaResultados.rowCOunt() - 1, 3 + i,  )
             self.tablaResultados.setItem(self.tablaResultados.rowCount() - 1, 12, QTableWidgetItem(str(vector.getCantDiasSoleados())))
             self.tablaResultados.setItem(self.tablaResultados.rowCount() - 1, 13, QTableWidgetItem(str(vector.getCantDiasLluviosos())))
             self.tablaResultados.setItem(self.tablaResultados.rowCount() - 1, 14, QTableWidgetItem(str(vector.getCantDiasNublados())))

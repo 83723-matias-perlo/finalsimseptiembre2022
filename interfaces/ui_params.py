@@ -34,6 +34,7 @@ class UiParams(QtWidgets.QWidget):
         validador_ent_positivo = QRegExp("[1-9][0-9]*")
         validador_proporcion = QRegExp("^[01]|^0\.[0-9]+$")
 
+        self.txtCantAnios.setValidator(QRegExpValidator(validador_ent_positivo, self.txtCantAnios))
         self.txtCoefSoleado.setValidator(   QRegExpValidator(validador_coef, self.txtCoefSoleado))
         self.txtCoefLluvia.setValidator(    QRegExpValidator(validador_coef, self.txtCoefLluvia))
         self.txtCoefNublado.setValidator(   QRegExpValidator(validador_coef, self.txtCoefNublado))
@@ -58,6 +59,7 @@ class UiParams(QtWidgets.QWidget):
     
     def validar(self):
         for entrada in [self.txtCoefSoleado,
+        self.txtCantAnios,
         self.txtCoefLluvia,
         self.txtCoefNublado,
         self.txtCoefTardanza,
@@ -87,6 +89,7 @@ class UiParams(QtWidgets.QWidget):
         self.msgEstado.setText("Parametros Restablecidos")
 
     def cargarParametros(self):
+        self.txtCantAnios.setText(str(self.parametros.cant_anios))
         self.txtCoefSoleado.setText(str(self.parametros.coef_soleado))
         self.txtCoefLluvia.setText(str(self.parametros.coef_lluvia))
         self.txtCoefNublado.setText(str(self.parametros.coef_nublado))
@@ -109,6 +112,7 @@ class UiParams(QtWidgets.QWidget):
         self.txtMediaTardanza.setText(str(self.parametros.media_dias_tardanza_fertilizante))
     
     def guardarParametros(self):
+        self.parametros.cant_anios = int(self.txtCantAnios.text())
         self.parametros.coef_soleado =  int(self.txtCoefSoleado.text())
         self.parametros.coef_lluvia =   int(self.txtCoefLluvia.text())
         self.parametros.coef_nublado =  int(self.txtCoefNublado.text())

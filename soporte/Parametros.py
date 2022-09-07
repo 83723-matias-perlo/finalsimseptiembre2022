@@ -6,6 +6,7 @@ class Parametros:
     def getDefault():
         '''Singleton de Parametros por defecto'''
         default = Parametros()
+        default.cant_anios = 40
         default.coef_soleado =   250
         default.coef_lluvia =    390
         default.coef_nublado =   -150
@@ -19,6 +20,7 @@ class Parametros:
         return default
 
     def __init__(self) -> None:
+        self.cant_anios = 0
         self.coef_soleado =   0
         self.coef_lluvia =    0
         self.coef_nublado =   0

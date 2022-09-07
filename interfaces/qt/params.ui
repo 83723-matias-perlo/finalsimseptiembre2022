@@ -88,6 +88,32 @@
      <cstring>txtCoefNublado</cstring>
     </property>
    </widget>
+    <widget class="QLabel" name="label_anios">
+        <property name="geometry">
+        <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>61</width>
+        <height>16</height>
+        </rect>
+        </property>
+        <property name="text">
+        <string>Cant Anios</string>
+        </property>
+        <property name="buddy">
+        <cstring>txtCoefTardanza</cstring>
+        </property>
+    </widget>
+    <widget class="QLineEdit" name="txtCantAnios">
+        <property name="geometry">
+        <rect>
+        <x>40</x>
+        <y>0</y>
+        <width>101</width>
+        <height>20</height>
+        </rect>
+        </property>
+    </widget>
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>

@@ -27,8 +27,8 @@ class VectorEstado:
     def getYear(self) -> int:
         return self.__year
 
-    def getRndClima(self) -> float:
-        return self.__dias[0].getRndClima()
+    def getRndClima(self, dia: int) -> float:
+        return self.__dias[dia - 1].getRndClima()
 
     def getClimaDia(self, dia: int) -> str:
         return self.__dias[dia - 1].getClima()

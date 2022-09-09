@@ -61,7 +61,7 @@
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>1938</width>
+       <width>2838</width>
        <height>524</height>
       </rect>
      </property>
@@ -70,13 +70,13 @@
        <widget class="QTableWidget" name="tablaHeader">
         <property name="minimumSize">
          <size>
-          <width>1920</width>
+          <width>2820</width>
           <height>65</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
-          <width>1920</width>
+          <width>2820</width>
           <height>65</height>
          </size>
         </property>
@@ -127,7 +127,7 @@
         </column>
         <column>
          <property name="text">
-          <string>rnd clima inicial</string>
+          <string>rnd clima 1</string>
          </property>
         </column>
         <column>
@@ -137,7 +137,17 @@
         </column>
         <column>
          <property name="text">
+          <string>rnd clima 2</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
           <string>clima dia 2</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>rnd clima 3</string>
          </property>
         </column>
         <column>
@@ -147,7 +157,17 @@
         </column>
         <column>
          <property name="text">
+          <string>rnd clima 4</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
           <string>clima dia 4</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>rnd clima 5</string>
          </property>
         </column>
         <column>
@@ -157,7 +177,17 @@
         </column>
         <column>
          <property name="text">
+          <string>rnd clima 6</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
           <string>clima dia 6</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>rnd clima 7</string>
          </property>
         </column>
         <column>
@@ -167,12 +197,27 @@
         </column>
         <column>
          <property name="text">
+          <string>rnd clima 8</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
           <string>clima dia 8</string>
          </property>
         </column>
         <column>
          <property name="text">
+          <string>rnd clima 9</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
           <string>clima dia 9</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>rnd clima 10</string>
          </property>
         </column>
         <column>
@@ -225,27 +270,27 @@
           <string>clima primeros 10 dias</string>
          </property>
         </item>
-        <item row="0" column="12">
+        <item row="0" column="21">
          <property name="text">
           <string>total dias por clima</string>
          </property>
         </item>
-        <item row="0" column="13">
+        <item row="0" column="22">
          <property name="text">
           <string/>
          </property>
         </item>
-        <item row="0" column="15">
+        <item row="0" column="24">
          <property name="text">
           <string>tardanza fertilizante</string>
          </property>
         </item>
-        <item row="0" column="17">
+        <item row="0" column="26">
          <property name="text">
           <string/>
          </property>
         </item>
-        <item row="0" column="18">
+        <item row="0" column="27">
          <property name="text">
           <string/>
          </property>
@@ -257,7 +302,7 @@
         </item>
         <item row="1" column="1">
          <property name="text">
-          <string>rnd clima inicial</string>
+          <string>rnd clima 1</string>
          </property>
         </item>
         <item row="1" column="2">
@@ -267,80 +312,125 @@
         </item>
         <item row="1" column="3">
          <property name="text">
-          <string>clima dia 2</string>
+          <string>rnd clima 2</string>
          </property>
         </item>
         <item row="1" column="4">
          <property name="text">
-          <string>clima dia 3</string>
+          <string>clima dia 2</string>
          </property>
         </item>
         <item row="1" column="5">
          <property name="text">
-          <string>clima dia 4</string>
+          <string>rnd clima 3</string>
          </property>
         </item>
         <item row="1" column="6">
          <property name="text">
-          <string>clima dia 5</string>
+          <string>clima dia 3</string>
          </property>
         </item>
         <item row="1" column="7">
          <property name="text">
-          <string>clima dia 6</string>
+          <string>rnd clima 4</string>
          </property>
         </item>
         <item row="1" column="8">
          <property name="text">
-          <string>clima dia 7</string>
+          <string>clima dia 4</string>
          </property>
         </item>
         <item row="1" column="9">
          <property name="text">
-          <string>clima dia 8</string>
+          <string>rnd clima 5</string>
          </property>
         </item>
         <item row="1" column="10">
          <property name="text">
-          <string>clima dia 9</string>
+          <string>clima dia 5</string>
          </property>
         </item>
         <item row="1" column="11">
          <property name="text">
-          <string>clima dia 10</string>
+          <string>rnd clima 6</string>
          </property>
         </item>
         <item row="1" column="12">
          <property name="text">
-          <string>dias soleados</string>
+          <string>clima dia 6</string>
          </property>
         </item>
         <item row="1" column="13">
          <property name="text">
-          <string>dias lluviosos</string>
+          <string>rnd clima 7</string>
          </property>
         </item>
         <item row="1" column="14">
          <property name="text">
-          <string>dias nublados</string>
+          <string>clima dia 7</string>
          </property>
         </item>
         <item row="1" column="15">
          <property name="text">
-          <string>rnd tardanza</string>
+          <string>rnd clima 8</string>
          </property>
         </item>
         <item row="1" column="16">
          <property name="text">
-          <string>dias tardanza</string>
+          <string>clima dia 8</string>
          </property>
         </item>
         <item row="1" column="17">
          <property name="text">
-          <string>produccion anual</string>
+          <string>rnd clima 9</string>
          </property>
         </item>
         <item row="1" column="18">
+         <property name="text">
+          <string>clima dia 9</string>
+         </property>
+        </item>
+        <item row="1" column="19">
+         <property name="text">
+          <string>rnd clima 10</string>
+         </property>
+        </item>
+        <item row="1" column="20">
+         <property name="text">
+          <string>clima dia 10</string>
+         </property>
+        </item>
+        <item row="1" column="21">
+         <property name="text">
+          <string>dias soleados</string>
+         </property>
+        </item>
+        <item row="1" column="22">
+         <property name="text">
+          <string>dias lluviosos</string>
+         </property>
+        </item>
+        <item row="1" column="23">
+         <property name="text">
+          <string>dias nublados</string>
+         </property>
+        </item>
+        <item row="1" column="24">
+         <property name="text">
+          <string>rnd tardanza</string>
+         </property>
+        </item>
+        <item row="1" column="25">
+         <property name="text">
+          <string>dias tardanza</string>
+         </property>
+        </item>
+        <item row="1" column="26">
+         <property name="text">
+          <string>produccion anual</string>
+         </property>
+        </item>
+        <item row="1" column="27">
          <property name="text">
           <string>produccion anual ac</string>
          </property>
@@ -351,13 +441,13 @@
        <widget class="QTableWidget" name="tablaResultados">
         <property name="minimumSize">
          <size>
-          <width>1920</width>
+          <width>2820</width>
           <height>420</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
-          <width>1920</width>
+          <width>2820</width>
           <height>420</height>
          </size>
         </property>
@@ -374,7 +464,10 @@
          <bool>false</bool>
         </property>
         <property name="selectionMode">
-         <enum>QAbstractItemView::NoSelection</enum>
+         <enum>QAbstractItemView::SingleSelection</enum>
+        </property>
+        <property name="selectionBehavior">
+         <enum>QAbstractItemView::SelectRows</enum>
         </property>
         <property name="showGrid">
          <bool>true</bool>
@@ -398,7 +491,7 @@
         </column>
         <column>
          <property name="text">
-          <string>rnd clima inicial</string>
+          <string>rnd clima 1</string>
          </property>
         </column>
         <column>
@@ -408,7 +501,17 @@
         </column>
         <column>
          <property name="text">
+          <string>rnd clima 2</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
           <string>clima dia 2</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>rnd clima 3</string>
          </property>
         </column>
         <column>
@@ -418,7 +521,17 @@
         </column>
         <column>
          <property name="text">
+          <string>rnd clima 4</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
           <string>clima dia 4</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>rnd clima 5</string>
          </property>
         </column>
         <column>
@@ -428,7 +541,17 @@
         </column>
         <column>
          <property name="text">
+          <string>rnd clima 6</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
           <string>clima dia 6</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>rnd clima 7</string>
          </property>
         </column>
         <column>
@@ -438,12 +561,27 @@
         </column>
         <column>
          <property name="text">
+          <string>rnd clima 8</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
           <string>clima dia 8</string>
          </property>
         </column>
         <column>
          <property name="text">
+          <string>rnd clima 9</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
           <string>clima dia 9</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>rnd clima 10</string>
          </property>
         </column>
         <column>

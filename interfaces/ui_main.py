@@ -39,13 +39,17 @@ class UiMain(QtWidgets.QMainWindow):
     def configurarTabla(self):
         # span
         # climas de los dias
-        self.tablaHeader.setSpan(0, 1, 1, 11)
+        self.tablaHeader.setSpan(0, 1, 1, 20)
         
         # total de dias por clima
-        self.tablaHeader.setSpan(0, 12, 1, 3)
+        self.tablaHeader.setSpan(0, 21, 1, 3)
 
         # tardanza del fertilizante
-        self.tablaHeader.setSpan(0, 15, 1, 2)
+        self.tablaHeader.setSpan(0, 24, 1, 2)
+
+        # produccion anual
+        self.tablaHeader.setSpan(0, 26, 1, 2)
+
 
     def cargarSimulaciones(self):
         self.limpiarContent()
@@ -57,18 +61,21 @@ class UiMain(QtWidgets.QMainWindow):
             vector = simulador.ejecutarSimulacion()
             self.tablaResultados.insertRow(self.tablaResultados.rowCount())
             self.tablaResultados.setItem(self.tablaResultados.rowCount() - 1, 0, QTableWidgetItem(str(vector.getYear())))
-            self.tablaResultados.setItem(self.tablaResultados.rowCount() - 1, 1, QTableWidgetItem(str(self.__truncarFloat(vector.getRndClima(), 4))))
-            for i in range(0, 20, 2):
-                self.tablaResultados.setItem(self.tablaResultados.rowCount() - 1, 2 + i, QTableWidgetItem(str(vector.getClimaDia(i + 1))))
-                self.tablaResultados.setItem(self.tablaResultados.rowCOunt() - 1, 3 + i,  )
-            self.tablaResultados.setItem(self.tablaResultados.rowCount() - 1, 12, QTableWidgetItem(str(vector.getCantDiasSoleados())))
-            self.tablaResultados.setItem(self.tablaResultados.rowCount() - 1, 13, QTableWidgetItem(str(vector.getCantDiasLluviosos())))
-            self.tablaResultados.setItem(self.tablaResultados.rowCount() - 1, 14, QTableWidgetItem(str(vector.getCantDiasNublados())))
-            self.tablaResultados.setItem(self.tablaResultados.rowCount() - 1, 15, QTableWidgetItem(str(self.__truncarFloat(vector.getRndTardanzas(), 4))))
-            self.tablaResultados.setItem(self.tablaResultados.rowCount() - 1, 16, QTableWidgetItem(str(vector.getDiasTardanza())))
-            self.tablaResultados.setItem(self.tablaResultados.rowCount() - 1, 17, QTableWidgetItem(str(self.__truncarFloat(vector.getProduccionTotalAnual(), 4))))
+            # self.tablaResultados.setItem(self.tablaResultados.rowCount() - 1, 1, QTableWidgetItem(str(self.__truncarFloat(vector.getRndClima(), 4))))
+            dia = 1
+            for j in range(0, 20, 2):
+                self.tablaResultados.setItem(self.tablaResultados.rowCount() - 1, 1 + j, QTableWidgetItem(str(self.__truncarFloat(vector.getRndClima(dia), 4))))
+                self.tablaResultados.setItem(self.tablaResultados.rowCount() - 1, 2 + j, QTableWidgetItem(str(vector.getClimaDia(dia))))
+                dia += 1
+
+            self.tablaResultados.setItem(self.tablaResultados.rowCount() - 1, 21, QTableWidgetItem(str(vector.getCantDiasSoleados())))
+            self.tablaResultados.setItem(self.tablaResultados.rowCount() - 1, 22, QTableWidgetItem(str(vector.getCantDiasLluviosos())))
+            self.tablaResultados.setItem(self.tablaResultados.rowCount() - 1, 23, QTableWidgetItem(str(vector.getCantDiasNublados())))
+            self.tablaResultados.setItem(self.tablaResultados.rowCount() - 1, 24, QTableWidgetItem(str(self.__truncarFloat(vector.getRndTardanzas(), 4))))
+            self.tablaResultados.setItem(self.tablaResultados.rowCount() - 1, 25, QTableWidgetItem(str(vector.getDiasTardanza())))
+            self.tablaResultados.setItem(self.tablaResultados.rowCount() - 1, 26, QTableWidgetItem(str(self.__truncarFloat(vector.getProduccionTotalAnual(), 4))))
             produccion_ac += vector.getProduccionTotalAnual()
-            self.tablaResultados.setItem(self.tablaResultados.rowCount() - 1, 18, QTableWidgetItem(str(self.__truncarFloat(produccion_ac, 4))))
+            self.tablaResultados.setItem(self.tablaResultados.rowCount() - 1, 27, QTableWidgetItem(str(self.__truncarFloat(produccion_ac, 4))))
     
     def cargarVentanaParametros(self):
         self.vtnParams.show()

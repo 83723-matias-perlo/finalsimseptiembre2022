@@ -79,6 +79,8 @@ class SimuladorMontecarloSimple:
     def ejecutarSimulacion(self) -> VectorEstado:
 
         dias = []
+        
+        Dia.resetInicial()
         for i in range(10):
             dias.append(Dia())
 

@@ -35,6 +35,9 @@ class Dia:
     def setProbDpsNublado(probs: list):
         Dia.__tablas_probabilidades[Clima.NUBLADO] = probs
 
+    def resetInicial():
+        Dia.__clima_anterior = Clima.INICIAL
+
     def __init__(self) -> None:
         self.__clima: Enum = ''
         self.__rnd_clima = -1

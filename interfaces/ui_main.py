@@ -3,6 +3,8 @@ from pathlib import Path
 from PyQt5 import QtWidgets, uic
 from PyQt5.QtWidgets import QTableWidgetItem
 # from PyQt5.QtCore import QObject, QThread, pyqtSignal
+from PyQt5.QtGui import QRegExpValidator
+from PyQt5.QtCore import QRegExp
 
 from negocio.Simulador import SimuladorMontecarloSimple, VectorEstado
 from interfaces.ui_params import UiParams
@@ -30,11 +32,15 @@ class UiMain(QtWidgets.QMainWindow):
         # configuracion
         self.configurarTabla()
 
+        self.btnIr.clicked.connect(self.IrA)
+        self.txtIrA.setValidator(QRegExpValidator(QRegExp("[1-9][0-9]*"), self.txtIrA))
+
         # bindings
         self.actionGenerar_Simulacion.triggered.connect(self.cargarSimulaciones)
         self.actionConfigurar_Parametros.triggered.connect(self.cargarVentanaParametros)
         self.actionLimpiarContenido.triggered.connect(self.limpiarContent)
         self.actionSobre_El_Ejercicio.triggered.connect(self.cargarVentanaEjercicio)
+
 
     def configurarTabla(self):
         # span
@@ -76,6 +82,30 @@ class UiMain(QtWidgets.QMainWindow):
             self.tablaResultados.setItem(self.tablaResultados.rowCount() - 1, 26, QTableWidgetItem(str(self.__truncarFloat(vector.getProduccionTotalAnual(), 4))))
             produccion_ac += vector.getProduccionTotalAnual()
             self.tablaResultados.setItem(self.tablaResultados.rowCount() - 1, 27, QTableWidgetItem(str(self.__truncarFloat(produccion_ac, 4))))
+        
+        self.statusbar.showMessage(f"Total Acumulado: {produccion_ac}")
+        self.habilitarIrA()
+        
+
+    def habilitarIrA(self):
+        self.btnIr.setEnabled(True)
+        self.txtIrA.setEnabled(True)
+    
+    def DesHabilitarIrA(self):
+        self.btnIr.setEnabled(False)
+        self.txtIrA.setEnabled(False)
+
+    def IrA(self):
+        if(self.txtIrA.text() == ''):
+            return
+        
+        IrANro = int(self.txtIrA.text())
+        if( IrANro > self.tablaResultados.rowCount()):
+            return
+        
+        self.tablaResultados.scrollToItem(self.tablaResultados.item(IrANro - 1, 0))
+        
+        
     
     def cargarVentanaParametros(self):
         self.vtnParams.show()
